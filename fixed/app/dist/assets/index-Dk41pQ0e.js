@@ -1,0 +1,3 @@
+/* Excerpt of the production bundle (vite build), as served to every visitor. */
+const Kp="https://demoref0000000000000.supabase.co",Yp="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlbW9yZWYwMDAwMDAwMDAwMDAwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MzY4MDAsImV4cCI6MjA3Njc5NjgwMH0.pk8RxWGqhJeTItL43fz-mGQa1NxBgyAbSNgj_5mlwJ0";const qe=Ws(Kp,Yp);
+function Ad(){const{profile:e}=Up(),[t,n]=y.useState(""),[r,o]=y.useState(10),[m,a]=y.useState("");if(!(e!=null&&e.is_admin))return null;async function i(){const{error:s}=await qe.functions.invoke("admin-grant-credits",{body:{user_id:t,credits:r}});a(s?s.message:`Granted ${r} credits`)}return d.jsx("form",{onSubmit:s=>{s.preventDefault(),i()},children:[]})}

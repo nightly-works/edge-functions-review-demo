@@ -1,0 +1,12 @@
+project_id = "cover-letter-ai"
+
+# The gateway rejects calls without a valid token, and the function reads the user from that token.
+[functions.generate]
+verify_jwt = true
+
+[functions.admin-grant-credits]
+verify_jwt = true
+
+# Stripe sends no Supabase token: the function verifies Stripe's signature instead.
+[functions.stripe-webhook]
+verify_jwt = false

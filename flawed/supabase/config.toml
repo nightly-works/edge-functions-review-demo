@@ -1,0 +1,9 @@
+project_id = "cover-letter-ai"
+
+# Off, so the gateway passes any request through, and the function never checks the caller either.
+[functions.generate]
+verify_jwt = false
+
+# Stripe sends no Supabase token, so the gateway check is off: the function must verify Stripe's signature.
+[functions.stripe-webhook]
+verify_jwt = false

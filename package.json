@@ -1,0 +1,10 @@
+{
+  "name": "edge-functions-review-demo",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "scan": "node tools/scan-bundle.ts"
+  }
+}
